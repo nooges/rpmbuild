@@ -12,11 +12,11 @@
 
 %define withvimspell 0
 
-%define baseversion 7.3
+%define baseversion 7.4
 #used for pre-releases:
 %define beta %{nil}
-%define vimdir vim73%{?beta}
-%define patchlevel 1242
+%define vimdir vim74%{?beta}
+%define patchlevel 110
 
 Summary: The VIM editor.
 Name: vim
@@ -438,13 +438,14 @@ rm -rf $RPM_BUILD_ROOT
 %lang(zh_TW.UTF-8) /usr/share/vim/%{vimdir}/lang/zh_TW.UTF-8
 /usr/bin/xxd
 %{_mandir}/man1/vim.*
-#%{_mandir}/man1/ex.*
+%{_mandir}/man1/ex.*
 %{_mandir}/man1/vi.*
-#%{_mandir}/man1/view.*
+%{_mandir}/man1/view.*
 %{_mandir}/man1/rvi.*
-#%{_mandir}/man1/rview.*
+%{_mandir}/man1/rview.*
 %{_mandir}/man1/xxd.*
 %lang(fr) %{_mandir}/fr*
+%lang(ja) %{_mandir}/ja*
 %lang(it) %{_mandir}/it*
 %lang(ru) %{_mandir}/ru*
 %lang(pl) %{_mandir}/pl*
